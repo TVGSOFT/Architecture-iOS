@@ -1,0 +1,5 @@
+github "ReactiveX/RxSwift"
+github "Swinject/Swinject"
+github "Alamofire/Alamofire"
+github "SwiftyJSON/SwiftyJSON"
+github "realm/realm-cocoa"
