@@ -15,7 +15,7 @@ public class Favorite: Entity {
     dynamic var restaurantId: Int = 0
     dynamic var userId: Int = 0
     
-    // MARK: Public method
+    // MARK: Override method
     
     public override class func from<T: Favorite>(json: JSON, inout output: T?) {
         super.from(json, output: &output)

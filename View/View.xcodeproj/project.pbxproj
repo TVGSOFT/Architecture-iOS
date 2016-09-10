@@ -11,14 +11,16 @@
 		FB4CC93E1D75792B00FA96E0 /* ViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4CC93D1D75792B00FA96E0 /* ViewTests.swift */; };
 		FB4CC9491D75792B00FA96E0 /* ViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4CC9481D75792B00FA96E0 /* ViewUITests.swift */; };
 		FB785AD81D7C424B00DF9E07 /* Realm.framework in Embed Frameworks (7 items) */ = {isa = PBXBuildFile; fileRef = FB785AD61D7C423400DF9E07 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FB785ADC1D7C427700DF9E07 /* ViewModel.framework in Embed Frameworks (7 items) */ = {isa = PBXBuildFile; fileRef = FB785AD91D7C427400DF9E07 /* ViewModel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FB81F6A01D81C3D100303580 /* SwinjectStoryboard_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB81F69F1D81C3D100303580 /* SwinjectStoryboard_Extension.swift */; };
+		FB81F6A41D81C55A00303580 /* ViewModel.framework in Embed Frameworks (7 items) */ = {isa = PBXBuildFile; fileRef = FB81F6A11D81C54B00303580 /* ViewModel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FB81F6B11D81CFEC00303580 /* RxSwift.framework in Embed Frameworks (7 items) */ = {isa = PBXBuildFile; fileRef = FBE206841D805B7400A31748 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FB81F6B61D81D19B00303580 /* RealmSwift.framework in Embed Frameworks (7 items) */ = {isa = PBXBuildFile; fileRef = FB81F6B21D81D01700303580 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FBBC87BB1D7815D900B99433 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBBC87B81D7815D900B99433 /* LaunchScreen.storyboard */; };
 		FBBC87BC1D7815D900B99433 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBBC87B91D7815D900B99433 /* Main.storyboard */; };
 		FBBC87BE1D78160A00B99433 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBBC87BD1D78160A00B99433 /* Assets.xcassets */; };
 		FBE2067F1D8051FE00A31748 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE2067E1D8051FE00A31748 /* SignInViewController.swift */; };
 		FBE2068C1D805B8100A31748 /* RxBlocking.framework in Embed Frameworks (7 items) */ = {isa = PBXBuildFile; fileRef = FBE206821D805B7400A31748 /* RxBlocking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FBE2068D1D805B8200A31748 /* RxCocoa.framework in Embed Frameworks (7 items) */ = {isa = PBXBuildFile; fileRef = FBE206831D805B7400A31748 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FBE2068E1D805B8200A31748 /* RxSwift.framework in Embed Frameworks (7 items) */ = {isa = PBXBuildFile; fileRef = FBE206841D805B7400A31748 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FBE2068F1D805B8200A31748 /* RxTests.framework in Embed Frameworks (7 items) */ = {isa = PBXBuildFile; fileRef = FBE206851D805B7400A31748 /* RxTests.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FBE206901D805B8200A31748 /* Swinject.framework in Embed Frameworks (7 items) */ = {isa = PBXBuildFile; fileRef = FBE206861D805B7400A31748 /* Swinject.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -47,13 +49,14 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				FB81F6B61D81D19B00303580 /* RealmSwift.framework in Embed Frameworks (7 items) */,
 				FBE2068C1D805B8100A31748 /* RxBlocking.framework in Embed Frameworks (7 items) */,
 				FBE2068D1D805B8200A31748 /* RxCocoa.framework in Embed Frameworks (7 items) */,
-				FBE2068E1D805B8200A31748 /* RxSwift.framework in Embed Frameworks (7 items) */,
+				FB81F6B11D81CFEC00303580 /* RxSwift.framework in Embed Frameworks (7 items) */,
 				FBE2068F1D805B8200A31748 /* RxTests.framework in Embed Frameworks (7 items) */,
 				FBE206901D805B8200A31748 /* Swinject.framework in Embed Frameworks (7 items) */,
 				FB785AD81D7C424B00DF9E07 /* Realm.framework in Embed Frameworks (7 items) */,
-				FB785ADC1D7C427700DF9E07 /* ViewModel.framework in Embed Frameworks (7 items) */,
+				FB81F6A41D81C55A00303580 /* ViewModel.framework in Embed Frameworks (7 items) */,
 			);
 			name = "Embed Frameworks (7 items)";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -71,7 +74,9 @@
 		FB4CC9481D75792B00FA96E0 /* ViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewUITests.swift; sourceTree = "<group>"; };
 		FB4CC94A1D75792B00FA96E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB785AD61D7C423400DF9E07 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
-		FB785AD91D7C427400DF9E07 /* ViewModel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ViewModel.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/Foody-debrbnvvnmrejnbwvxpwlloofrrj/Build/Products/Debug-iphonesimulator/ViewModel.framework"; sourceTree = "<group>"; };
+		FB81F69F1D81C3D100303580 /* SwinjectStoryboard_Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwinjectStoryboard_Extension.swift; sourceTree = "<group>"; };
+		FB81F6A11D81C54B00303580 /* ViewModel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ViewModel.framework; path = "../../../../Library/Developer/Xcode/DerivedData/Foody-fxatugdqvgoertcrisosifvfsjiv/Build/Products/Debug-iphonesimulator/ViewModel.framework"; sourceTree = "<group>"; };
+		FB81F6B21D81D01700303580 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		FBBC87B81D7815D900B99433 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FBBC87B91D7815D900B99433 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		FBBC87BD1D78160A00B99433 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -111,12 +116,13 @@
 		FB23F3F31D772D0400A78AFB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FB81F6B21D81D01700303580 /* RealmSwift.framework */,
+				FB81F6A11D81C54B00303580 /* ViewModel.framework */,
 				FBE206821D805B7400A31748 /* RxBlocking.framework */,
 				FBE206831D805B7400A31748 /* RxCocoa.framework */,
 				FBE206841D805B7400A31748 /* RxSwift.framework */,
 				FBE206851D805B7400A31748 /* RxTests.framework */,
 				FBE206861D805B7400A31748 /* Swinject.framework */,
-				FB785AD91D7C427400DF9E07 /* ViewModel.framework */,
 				FB785AD61D7C423400DF9E07 /* Realm.framework */,
 			);
 			path = Frameworks;
@@ -147,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				FBBC87BA1D7815D900B99433 /* ViewController */,
+				FB81F69E1D81C3B100303580 /* Extension */,
 				FBBC87B61D7815D900B99433 /* Resource */,
 				FB4CC9281D75792B00FA96E0 /* AppDelegate.swift */,
 				FB4CC9341D75792B00FA96E0 /* Info.plist */,
@@ -170,6 +177,14 @@
 				FB4CC94A1D75792B00FA96E0 /* Info.plist */,
 			);
 			path = ViewUITests;
+			sourceTree = "<group>";
+		};
+		FB81F69E1D81C3B100303580 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				FB81F69F1D81C3D100303580 /* SwinjectStoryboard_Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		FBBC87B61D7815D900B99433 /* Resource */ = {
@@ -267,6 +282,7 @@
 				TargetAttributes = {
 					FB4CC9241D75792B00FA96E0 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = U5EH6TQUDZ;
 					};
 					FB4CC9381D75792B00FA96E0 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -331,6 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBE2067F1D8051FE00A31748 /* SignInViewController.swift in Sources */,
+				FB81F6A01D81C3D100303580 /* SwinjectStoryboard_Extension.swift in Sources */,
 				FB4CC9291D75792B00FA96E0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -456,6 +473,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
@@ -463,8 +482,9 @@
 				INFOPLIST_FILE = View/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tvgsoft.View;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tvgsoft.Foody;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -472,6 +492,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
@@ -479,8 +501,9 @@
 				INFOPLIST_FILE = View/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tvgsoft.View;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tvgsoft.Foody;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

@@ -24,7 +24,13 @@ public class Restaurant: Entity {
     
     var comments: List<Comment>?
     
-    // MARK: Public method
+    // MARK: Override method
+    
+    public override static func primaryKey() -> String? {
+        return "id"
+    }
+    
+    // MARK: Override method
     
     public override class func from<T: Restaurant>(json: JSON, inout output: T?) {
         super.from(json, output: &output)

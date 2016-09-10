@@ -17,17 +17,17 @@ public class ClientServiceImpl: Service, ClientService {
     // MARK: ClientService implement
     
     public func getRestaurant(categoryId: Int,
-                              lastSync: Double,
+                              lastSync: NSDate,
                               offet: Int,
                               limit: Int,
                               successHandler: ([Restaurant]) -> Void,
                               failureHandler: (NSError) -> Void) {
         
         var parameters = [String : AnyObject]()
-        parameters["category_id"] = categoryId
-        parameters["last_sync_timestamp"] = lastSync
-        parameters["offet"] = offet
-        parameters["limit"] = limit
+//        parameters["category_id"] = categoryId
+//        parameters["last_sync_timestamp"] = lastSync
+//        parameters["offet"] = offet
+//        parameters["limit"] = limit
         
         self.apiHelper
             .get(.GetRestaurant, parameters: parameters) { (json, error) in
@@ -65,7 +65,7 @@ public class ClientServiceImpl: Service, ClientService {
         }
     }
     
-    public func getCategory(lastSync: Double,
+    public func getCategory(lastSync: NSDate,
                             offet: Int,
                             limit: Int,
                             successHandler: ([Category]) -> Void,

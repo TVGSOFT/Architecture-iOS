@@ -6,18 +6,24 @@
 //  Copyright © 2016 TVG Soft, Inc. All rights reserved.
 //
 
-import Foundation
-
 public class NavigatorImpl: Navigator {
     
     // MARK: Property
     
     private var pages = [ViewKey: String]()
     
+    // MARK: Constructor
+    
+    public init() {
+        
+    }
+    
     // MARK: Public method
     
     public func configure(key: ViewKey, view: String) {
         pages[key] = view
+        
+        print(view)
     }
     
     // MARK: INavigator implement
@@ -34,7 +40,7 @@ public class NavigatorImpl: Navigator {
     }
     
     public func goBack() {
-        var viewController = UIApplication.currentViewController
+        let viewController = UIApplication.currentViewController
         
         if let navigateController = viewController as? UINavigationController {
             navigateController.popViewControllerAnimated(true)

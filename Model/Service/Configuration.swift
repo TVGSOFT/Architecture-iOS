@@ -8,7 +8,7 @@
 
 public enum Server: String {
     
-    case Url = "http://167.88.124.80/foody_api/"
+    case Dev = "http://167.88.124.80/foody_api/"
     
 }
 

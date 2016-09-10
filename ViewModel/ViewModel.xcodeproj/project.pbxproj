@@ -22,7 +22,8 @@
 		FB785ABE1D7C3D7000DF9E07 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FBB6A3931D77EDC80090B6F5 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FB785ABF1D7C3D7000DF9E07 /* RxTests.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FBB6A3941D77EDC80090B6F5 /* RxTests.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FB785AC01D7C3D7000DF9E07 /* Swinject.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FBB6A3951D77EDC80090B6F5 /* Swinject.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FB785AD31D7C3EF400DF9E07 /* Model.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FB785ACE1D7C3EC200DF9E07 /* Model.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FB81F6A71D81C58C00303580 /* Model.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FB81F6A51D81C58700303580 /* Model.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FB81F6AA1D81C8B000303580 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FB81F6A81D81C88800303580 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FBE2067D1D8050F100A31748 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE2067C1D8050F100A31748 /* SignInViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,12 +44,13 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				FB785AD31D7C3EF400DF9E07 /* Model.framework in Embed Frameworks */,
+				FB81F6AA1D81C8B000303580 /* Realm.framework in Embed Frameworks */,
 				FB785ABC1D7C3D7000DF9E07 /* RxBlocking.framework in Embed Frameworks */,
 				FB785ABD1D7C3D7000DF9E07 /* RxCocoa.framework in Embed Frameworks */,
 				FB785ABE1D7C3D7000DF9E07 /* RxSwift.framework in Embed Frameworks */,
 				FB785ABF1D7C3D7000DF9E07 /* RxTests.framework in Embed Frameworks */,
 				FB785AC01D7C3D7000DF9E07 /* Swinject.framework in Embed Frameworks */,
+				FB81F6A71D81C58C00303580 /* Model.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -69,7 +71,8 @@
 		FB4CC96A1D75793B00FA96E0 /* ViewModelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViewModelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB4CC96F1D75793B00FA96E0 /* ViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelTests.swift; sourceTree = "<group>"; };
 		FB4CC9711D75793B00FA96E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FB785ACE1D7C3EC200DF9E07 /* Model.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Model.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/Foody-debrbnvvnmrejnbwvxpwlloofrrj/Build/Products/Debug-iphonesimulator/Model.framework"; sourceTree = "<group>"; };
+		FB81F6A51D81C58700303580 /* Model.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Model.framework; path = "../../../../Library/Developer/Xcode/DerivedData/Foody-fxatugdqvgoertcrisosifvfsjiv/Build/Products/Debug-iphonesimulator/Model.framework"; sourceTree = "<group>"; };
+		FB81F6A81D81C88800303580 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		FBB6A3911D77EDC80090B6F5 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxBlocking.framework; sourceTree = "<group>"; };
 		FBB6A3921D77EDC80090B6F5 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxCocoa.framework; sourceTree = "<group>"; };
 		FBB6A3931D77EDC80090B6F5 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxSwift.framework; sourceTree = "<group>"; };
@@ -100,7 +103,8 @@
 		FB23F3D61D772C9300A78AFB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FB785ACE1D7C3EC200DF9E07 /* Model.framework */,
+				FB81F6A81D81C88800303580 /* Realm.framework */,
+				FB81F6A51D81C58700303580 /* Model.framework */,
 				FBB6A3911D77EDC80090B6F5 /* RxBlocking.framework */,
 				FBB6A3921D77EDC80090B6F5 /* RxCocoa.framework */,
 				FBB6A3931D77EDC80090B6F5 /* RxSwift.framework */,

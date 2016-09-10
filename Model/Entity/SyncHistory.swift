@@ -15,7 +15,7 @@ public class SyncHistory: Entity {
     dynamic var tableName: String?
     dynamic var lastSyncedAt: NSDate?
     
-    // MARK: Public method
+    // MARK: Override method
     
     public override class func from<T: SyncHistory>(json: JSON, inout output: T?) {
         super.from(json, output: &output)

@@ -16,7 +16,7 @@ public class DateHelper {
     public static var dateFormatter: NSDateFormatter {
         if (internalJsonDateFormatter == nil) {
             internalJsonDateFormatter = NSDateFormatter()
-            internalJsonDateFormatter!.dateFormat = "yyyy-MM-dd"
+            internalJsonDateFormatter!.dateFormat = "yyyy-MM-dd HH:mm:ss"
         }
         return internalJsonDateFormatter!
     }

@@ -19,7 +19,7 @@ public class Food: Entity {
     dynamic var content: String?
     dynamic var isDeleted: Bool = false
     
-    // MARK: Public method
+    // MARK: Override method
     
     public override class func from<T: Food>(json: JSON, inout output: T?) {
         super.from(json, output: &output)

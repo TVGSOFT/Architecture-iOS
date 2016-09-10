@@ -16,7 +16,7 @@ public class User: Entity {
     dynamic var email: String?
     dynamic var password: String?
     
-    // MARK: Public method
+    // MARK: Override method
     
     public override class func from<T: User>(json: JSON, inout output: T?) {
         super.from(json, output: &output)

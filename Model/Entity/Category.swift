@@ -15,7 +15,7 @@ public class Category: Entity {
     dynamic var name: String?
     dynamic var image: String?
     
-    // MARK: Public method
+    // MARK: Override method
     
     public override class func from<T: Category>(json: JSON, inout output: T?) {
         super.from(json, output: &output)

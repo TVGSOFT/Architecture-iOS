@@ -15,10 +15,10 @@ public class Comment: Entity {
     dynamic var title: String?
     dynamic var content: String?
     dynamic var commenter: User?
-
+    dynamic var restaurantId: Int = 0
     dynamic var clientId: String?
     
-    // MARK: Public method
+    // MARK: Override method
     
     public override class func from<T: Comment>(json: JSON, inout output: T?) {
         super.from(json, output: &output)

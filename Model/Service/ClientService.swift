@@ -9,13 +9,13 @@
 public protocol ClientService {
     
     func getRestaurant(categoryId: Int,
-                       lastSync: Double,
+                       lastSync: NSDate,
                        offet: Int,
                        limit: Int,
                        successHandler: ([Restaurant]) -> Void,
                        failureHandler: (NSError) -> Void)
     
-    func getCategory(lastSync: Double,
+    func getCategory(lastSync: NSDate,
                      offet: Int,
                      limit: Int,
                      successHandler: ([Category]) -> Void,
