@@ -21,6 +21,7 @@
 		FB4CC9881D75794500FA96E0 /* Model.h in Headers */ = {isa = PBXBuildFile; fileRef = FB4CC9871D75794500FA96E0 /* Model.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FB4CC98F1D75794500FA96E0 /* Model.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB4CC9841D75794500FA96E0 /* Model.framework */; };
 		FB4CC9941D75794500FA96E0 /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4CC9931D75794500FA96E0 /* ModelTests.swift */; };
+		FB5A14811D84091500646261 /* NSDate_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5A14801D84091500646261 /* NSDate_Extension.swift */; };
 		FBB6A38D1D77ED6C0090B6F5 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FBB6A3851D77ED500090B6F5 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FBB6A38E1D77ED6C0090B6F5 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FBB6A3861D77ED500090B6F5 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FBB6A38F1D77ED6C0090B6F5 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FBB6A3871D77ED500090B6F5 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -89,6 +90,7 @@
 		FB4CC98E1D75794500FA96E0 /* ModelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ModelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB4CC9931D75794500FA96E0 /* ModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
 		FB4CC9951D75794500FA96E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB5A14801D84091500646261 /* NSDate_Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDate_Extension.swift; sourceTree = "<group>"; };
 		FBB6A3851D77ED500090B6F5 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
 		FBB6A3861D77ED500090B6F5 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		FBB6A3871D77ED500090B6F5 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
@@ -250,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				FBB7965F1D7C75FC0079C6FF /* JSON_Extension.swift */,
+				FB5A14801D84091500646261 /* NSDate_Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -389,6 +392,7 @@
 				FB23F4321D774BB900A78AFB /* ClientServiceImpl.swift in Sources */,
 				FB23F4111D77331700A78AFB /* Configuration.swift in Sources */,
 				FBDB3DBD1D819D8D0058B36E /* JobManager.swift in Sources */,
+				FB5A14811D84091500646261 /* NSDate_Extension.swift in Sources */,
 				FBDB3DB81D819CED0058B36E /* FetchFoodJob.swift in Sources */,
 				FBCC4F461D77DDDF00E0651E /* Comment.swift in Sources */,
 				FB23F42A1D774A6400A78AFB /* Entity.swift in Sources */,

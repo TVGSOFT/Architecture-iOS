@@ -14,7 +14,7 @@ extension JSON {
     public var date: NSDate? {
         switch self.type {
         case .String:
-            return DateHelper.dateFormatter.dateFromString(self.object as! String)
+            return DateHelper.localDateFormatter.dateFromString(self.object as! String)
         default:
             return nil
         }
@@ -23,7 +23,7 @@ extension JSON {
     public var dateTime: NSDate? {
         switch self.type {
         case .String:
-            return DateHelper.dateTimeFormatter.dateFromString(self.object as! String)
+            return DateHelper.localDateTimeFormatter.dateFromString(self.object as! String)
         default:
             return nil
         }

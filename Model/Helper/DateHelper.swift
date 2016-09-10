@@ -10,23 +10,33 @@ public class DateHelper {
     
     // MARK: Property
     
-    private static var internalJsonDateFormatter: NSDateFormatter?
-    private static var internalJsonDateTimeFormatter: NSDateFormatter?
-
-    public static var dateFormatter: NSDateFormatter {
-        if (internalJsonDateFormatter == nil) {
-            internalJsonDateFormatter = NSDateFormatter()
-            internalJsonDateFormatter!.dateFormat = "yyyy-MM-dd HH:mm:ss"
+    private static var jsonLocalDateFormatter: NSDateFormatter?
+    private static var jsonLocalDateTimeFormatter: NSDateFormatter?
+    private static var jsonUtcDateFormatter: NSDateFormatter?
+    
+    public static var localDateFormatter: NSDateFormatter {
+        if jsonLocalDateFormatter == nil {
+            jsonLocalDateFormatter = NSDateFormatter()
+            jsonLocalDateFormatter!.dateFormat = "yyyy-MM-dd HH:mm:ss"
         }
-        return internalJsonDateFormatter!
+        return jsonLocalDateFormatter!
     }
     
-    public static var dateTimeFormatter: NSDateFormatter {
-        if (internalJsonDateTimeFormatter == nil) {
-            internalJsonDateTimeFormatter = NSDateFormatter()
-            internalJsonDateTimeFormatter!.dateFormat = "yyyy'-'MM'-'dd'T'HH':'mm':'ss.SSS'Z'"
+    public static var localDateTimeFormatter: NSDateFormatter {
+        if jsonLocalDateTimeFormatter == nil {
+            jsonLocalDateTimeFormatter = NSDateFormatter()
+            jsonLocalDateTimeFormatter!.dateFormat = "yyyy'-'MM'-'dd'T'HH':'mm':'ss.SSS'Z'"
         }
-        return internalJsonDateTimeFormatter!
+        return jsonLocalDateTimeFormatter!
+    }
+    
+    public static var utcDateFormatter: NSDateFormatter {
+        if (jsonUtcDateFormatter == nil) {
+            jsonUtcDateFormatter = NSDateFormatter()
+            jsonUtcDateFormatter!.timeZone = NSTimeZone(name: "UTC")
+            jsonUtcDateFormatter!.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        }
+        return jsonUtcDateFormatter!
     }
     
     // MARK: Constructor

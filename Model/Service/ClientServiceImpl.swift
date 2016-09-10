@@ -25,7 +25,7 @@ public class ClientServiceImpl: Service, ClientService {
         
         var parameters = [String : AnyObject]()
 //        parameters["category_id"] = categoryId
-//        parameters["last_sync_timestamp"] = lastSync
+//        parameters["last_sync_timestamp"] = lastSync.Utc
 //        parameters["offet"] = offet
 //        parameters["limit"] = limit
         
@@ -73,7 +73,7 @@ public class ClientServiceImpl: Service, ClientService {
         
         
         var parameters = [String : AnyObject]()
-        parameters["last_sync_timestamp"] = lastSync
+        parameters["last_sync_timestamp"] = lastSync.Utc
         parameters["offet"] = offet
         parameters["limit"] = limit
         
