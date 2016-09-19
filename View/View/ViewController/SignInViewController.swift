@@ -15,7 +15,7 @@ class SignInViewController: ViewController {
 
     // MARK: Property
     
-    @IBOutlet weak var button: UIButton!
+    @IBOutlet weak var cancelButton: UIButton!
     
     override var viewModelDelegate: ViewModelDelegate? {
         return viewModel
@@ -28,7 +28,7 @@ class SignInViewController: ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        button.rx_tap
+        cancelButton.rx_tap
               .subscribe(onNext: { [weak self] in
                 
                 self?.viewModel?.signInCommand()

@@ -28,15 +28,21 @@ extension SwinjectStoryboard {
     // MARK: Register service
     
     private static func registerService() {
-        defaultContainer.register(ApiHelper.self) { _ in
+        let container = defaultContainer
+        
+        container.register(JobManager.self) { _ in
+            JobManager(name: "com.tvgsoft.JobManager", maxConcurrentOperationCount: 4)
+        }
+        
+        container.register(ApiHelper.self) { _ in
             ApiHelper(url: .Dev)
         }
         
-        defaultContainer.register(AuthenticateService.self) { container in
+        container.register(AuthenticateService.self) { container in
             AuthenticateServiceImpl(apiHelper: container.resolve(ApiHelper.self)!)
         }
         
-        defaultContainer.register(ClientService.self) { container in
+        container.register(ClientService.self) { container in
             ClientServiceImpl(apiHelper: container.resolve(ApiHelper.self)!)
         }
     }
@@ -44,38 +50,38 @@ extension SwinjectStoryboard {
     // MARK: Register Model
     
     private static func registerModel() {
-        defaultContainer.register(Realm.self) { _ in
-            try! Realm()
+        let container = defaultContainer
+        
+        container.register(RestaurantModel.self) { _ in
+            RestaurantModel()
         }
         
-        defaultContainer.register(RestaurantModel.self) { container in
-            RestaurantModel(realm: container.resolve(Realm.self)!)
+        container.register(CommentModel.self) { _ in
+            CommentModel()
         }
         
-        defaultContainer.register(CommentModel.self) { container in
-            CommentModel(realm: container.resolve(Realm.self)!)
+        container.register(FoodModel.self) { _ in
+            FoodModel()
         }
         
-        defaultContainer.register(FoodModel.self) { container in
-            FoodModel(realm: container.resolve(Realm.self)!)
-        }
-        
-        defaultContainer.register(CategoryModel.self) { container in
-            CategoryModel(realm: container.resolve(Realm.self)!)
+        container.register(CategoryModel.self) { _ in
+            CategoryModel()
         }
     }
     
     // MARK: Register ViewModel
     
     private static func registerViewModel() {
-        let navigator = NavigatorImpl()
-        navigator.configure(.SignIn, view: NSStringFromClass(SignInViewController.self))
+        let container = defaultContainer
         
-        defaultContainer.register(Navigator.self) { _ in
-            navigator
+        container.register(Navigator.self) { _ in
+            let navigator = NavigatorImpl()
+            navigator.configure(.SignIn, view: NSStringFromClass(SignInViewController.self))
+            
+            return navigator
         }
         
-        defaultContainer.register(SignInViewModel.self) { container in
+        container.register(SignInViewModel.self) { container in
             SignInViewModel(
                 navigator: container.resolve(Navigator.self)!,
                 service: container.resolve(ClientService.self)!,
@@ -83,13 +89,27 @@ extension SwinjectStoryboard {
             )
         }
         
+        container.register(RestaurantViewModel.self) { container in
+            RestaurantViewModel(
+                navigator: container.resolve(Navigator.self)!,
+                service: container.resolve(ClientService.self)!,
+                model: container.resolve(RestaurantModel.self)!,
+                jobManager: container.resolve(JobManager.self)!
+            )
+        }
     }
     
     // MARK: Register storyboard
     
     private static func registerStoryboard() {
-        defaultContainer.registerForStoryboard(SignInViewController.self) { container, controller in
+        let container = defaultContainer
+        
+        container.registerForStoryboard(SignInViewController.self) { container, controller in
             controller.viewModel = container.resolve(SignInViewModel.self)!
+        }
+        
+        container.registerForStoryboard(RestaurantViewController.self) { container, controller in
+            controller.viewModel = container.resolve(RestaurantViewModel.self)!
         }
     }
     

@@ -23,11 +23,15 @@ public class ApiHelper {
 
     // MARK: Public method
     
+    public func get(function: Function, parameters: [String : AnyObject]? = nil) -> (JSON?, NSError?) {
+        return request(.GET, function: function.rawValue, parameters: parameters)
+    }
+    
     public func get(function: Function,
                     parameters: [String : AnyObject]? = nil,
                     completionHandler: (JSON?, NSError?) -> Void) {
         
-        self.request(
+        request(
             .GET,
             function: function.rawValue,
             parameters: parameters,
@@ -35,11 +39,15 @@ public class ApiHelper {
         )
     }
     
+    public func post(function: Function, parameters: [String : AnyObject]? = nil) -> (JSON?, NSError?) {
+        return request(.POST, function: function.rawValue, parameters: parameters)
+    }
+    
     public func post(function: Function,
                      parameters: [String : AnyObject]? = nil,
                      completionHandler: (JSON?, NSError?) -> Void) {
         
-        self.request(
+        request(
             .POST,
             function: function.rawValue,
             parameters: parameters,
@@ -47,15 +55,33 @@ public class ApiHelper {
         )
     }
     
+    private func request(method: Alamofire.Method, function: String, parameters: [String : AnyObject]? = nil) -> (JSON?, NSError?) {
+        let response = Alamofire.request(method, "\(baseUrl)\(function)", parameters: parameters)
+                                .validate()
+                                .responseJSON()
+        
+        if let value = response.result.value {
+            let json = JSON(value)
+            
+            return (json, json.error)
+        }
+        
+        return (nil, response.result.error)
+    }
+    
     private func request(method: Alamofire.Method,
                          function: String,
                          parameters: [String : AnyObject]? = nil,
                          completionHandler: (JSON?, NSError?) -> Void) {
         
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+        
         Alamofire.request(method, "\(baseUrl)\(function)", parameters: parameters)
                  .validate()
                  .responseJSON { response in
                 
+                    UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+                    
                     switch response.result {
                     case .Success:
                         if let value = response.result.value {
@@ -63,7 +89,7 @@ public class ApiHelper {
                         
                             completionHandler(json, json.error)
                         
-                            return;
+                            return
                         }
                     
                         completionHandler(nil, response.result.error)

@@ -11,23 +11,23 @@ import UIKit
 public class NavigationController: UINavigationController {
 
     public override func shouldAutorotate() -> Bool {
-        return UIApplication.currentViewController!.shouldAutorotate()
+        return topViewController!.shouldAutorotate()
     }
     
     public override func prefersStatusBarHidden() -> Bool {
-        return UIApplication.currentViewController!.prefersStatusBarHidden()
+        return topViewController!.prefersStatusBarHidden()
     }
     
     public override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIApplication.currentViewController!.preferredStatusBarStyle()
+        return topViewController!.preferredStatusBarStyle()
     }
     
     public override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
-        return UIApplication.currentViewController!.supportedInterfaceOrientations()
+        return topViewController!.supportedInterfaceOrientations()
     }
     
     public override func preferredInterfaceOrientationForPresentation() -> UIInterfaceOrientation {
-        return UIApplication.currentViewController!.preferredInterfaceOrientationForPresentation()
+        return topViewController!.preferredInterfaceOrientationForPresentation()
     }
     
 }

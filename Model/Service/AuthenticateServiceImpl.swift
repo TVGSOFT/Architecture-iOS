@@ -12,74 +12,55 @@ public class AuthenticateServiceImpl: Service, AuthenticateService {
     
     // MARK: AuthenticateService implement
     
-    public func signIn(email: String,
-                       password: String,
-                       successHandler: (User) -> Void,
-                       failureHandler: (NSError) -> Void) {
-        
+    public func signIn(email: String, password: String, completionHandler: (Response<User>) -> Void) {
         let parameters = [ "email"      : email,
                            "password"   : password ]
         
-        self.apiHelper
-            .post(.SignIn, parameters: parameters) { (json, error) in
-         
-                self.handleJson(json,
-                                error: error,
-                                successHandler: successHandler,
-                                failureHandler: failureHandler)
+        apiHelper.post(.SignIn, parameters: parameters) { [unowned self] (json, error) in
+            
+            self.handleJson(
+                json,
+                error: error,
+                completionHandler: completionHandler
+            )
         }
     }
     
-    public func signUp(email: String,
-                       password: String,
-                       name: String,
-                       successHandler: (User) -> Void,
-                       failureHandler: (NSError) -> Void) {
-        
+    public func signUp(email: String, password: String, name: String, completionHandler: (Response<User>) -> Void) {
         let parameters = [ "email"      : email,
                            "password"   : password,
                            "name"       : name ]
         
-        self.apiHelper
-            .post(.SignUp, parameters: parameters) { (json, error) in
-                
-               self.handleJson(json,
-                               error: error,
-                               successHandler: successHandler,
-                               failureHandler: failureHandler)
+        apiHelper.post(.SignUp, parameters: parameters) { [unowned self] (json, error) in
+            
+            self.handleJson(
+                json,
+                error: error,
+                completionHandler: completionHandler
+            )
         }
     }
     
     // MARK - Private method
     
-    private func handleJson(json: JSON?,
-                            error: NSError?,
-                            successHandler: (User) -> Void,
-                            failureHandler: (NSError) -> Void) {
+    private func handleJson(json: JSON?, error: NSError?, completionHandler: (Response<User>) -> Void) {
+        let response = Response<User>()
         
         if let hasJon = json {
-            let response = Response<User>()
             response.from(hasJon)
             
             if response.isSuccess {
                 User.from(hasJon["data"], output: &response.data)
-                
-                successHandler(response.data!)
             } else {
-                failureHandler(NSError(domain: response.message!, code: 0, userInfo: nil))
+                response.error = NSError(domain: response.message!, code: 0, userInfo: nil)
             }
-            
-            return
         }
         
         if let hasError = error {
-            failureHandler(hasError)
-            
-            return;
+            response.error = hasError
         }
         
-        failureHandler(self.dataError)
-        
+        completionHandler(response)
     }
     
 }

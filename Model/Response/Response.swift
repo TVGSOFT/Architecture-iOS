@@ -17,6 +17,8 @@ public class Response<T> {
     public var message: String?
     public var lastSyncedAt: NSDate?
 
+    public var error: NSError?
+    
     // Public method
     
     public func from(json: JSON) {

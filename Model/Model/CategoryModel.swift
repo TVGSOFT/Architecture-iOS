@@ -6,6 +6,8 @@
 //  Copyright © 2016 TVG Soft, Inc. All rights reserved.
 //
 
+import RealmSwift
+
 public class CategoryModel: BaseModel {
 
     // MARK: Property
@@ -16,9 +18,15 @@ public class CategoryModel: BaseModel {
     
     // MARK: Public method
     
-    public func getCategory() -> [Category] {
+    public func getCategory() -> [Category]? {
+        let realm = try! Realm()
+        
         let results = realm.objects(Category.self)
-                           .sorted("updatedAt")
+                           .sorted("updatedAt", ascending: true)
+        
+        if results.count <= 0 {
+            return nil
+        }
         
         var categories = [Category]()
         

@@ -17,7 +17,6 @@ public class Food: Entity {
     dynamic var categoryId: Int = 0
     dynamic var restaurantId: Int = 0
     dynamic var content: String?
-    dynamic var isDeleted: Bool = false
     
     // MARK: Override method
     
@@ -29,7 +28,6 @@ public class Food: Entity {
         output!.categoryId = json["category_id"].intValue
         output!.restaurantId = json["restaurant_id"].intValue
         output!.content = json["content"].string
-        output!.isDeleted = json["is_deleted"].boolValue
     }
     
 }

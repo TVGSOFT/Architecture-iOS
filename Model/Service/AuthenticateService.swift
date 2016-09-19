@@ -8,15 +8,8 @@
 
 public protocol AuthenticateService {
     
-    func signIn(email: String,
-                password: String,
-                successHandler: (User) -> Void,
-                failureHandler: (NSError) -> Void)
+    func signIn(email: String, password: String, completionHandler: (Response<User>) -> Void)
     
-    func signUp(email: String,
-                password: String,
-                name: String,
-                successHandler: (User) -> Void,
-                failureHandler: (NSError) -> Void)
+    func signUp(email: String, password: String, name: String, completionHandler: (Response<User>) -> Void)
     
 }

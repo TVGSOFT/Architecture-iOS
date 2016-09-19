@@ -12,14 +12,14 @@ public class BaseModel {
 
     // MARK: Property
     
-    internal let realm: Realm
-    
     public var tableName: String {
         return "Unknown"
     }
     
-    public var lastSyncedAt: NSDate {
+    public var lastSyncedAt: NSDate? {
         get {
+            let realm = try! Realm()
+            
             let result = realm.objects(SyncHistory.self)
                               .filter("tableName = '\(tableName)'")
                               .first
@@ -27,28 +27,43 @@ public class BaseModel {
                 return syncedAt
             }
             
-            return NSDate()
+            return nil
         }
         set {
-            try? realm.write {
-                let syncHistory = realm.create(SyncHistory.self)
-                syncHistory.lastSyncedAt = newValue
-                syncHistory.tableName = tableName
+            autoreleasepool {
+                let realm = try! Realm()
+                
+                try! realm.write {
+                    var syncHistory = realm.objects(SyncHistory.self)
+                                           .filter("tableName = '\(tableName)'")
+                                           .first
+                    
+                    if let hasSyncHistory = syncHistory {
+                        hasSyncHistory.lastSyncedAt = newValue
+                    } else {
+                        syncHistory = realm.create(SyncHistory.self)
+                        syncHistory!.lastSyncedAt = newValue
+                        syncHistory!.tableName = tableName
+                    }
+                }
             }
         }
     }
     
     // MARK: Constructor
     
-    public init(realm: Realm) {
-        self.realm = realm
+    public init() {
+        
     }
     
     // MARK: Public method
     
     public func add<T: Entity>(entity: T, update: Bool = false) {
-        try? realm.write {
-            realm.add(entity, update: update)
+        autoreleasepool {
+            let realm = try! Realm()
+            try! realm.write {
+                realm.add(entity, update: update)
+            }
         }
     }
     
@@ -57,16 +72,22 @@ public class BaseModel {
             return
         }
         
-        realm.beginWrite()
-        
-        realm.add(entities, update: update)
-        
-        try? realm.commitWrite()
+        autoreleasepool {
+            let realm = try! Realm()
+            realm.beginWrite()
+            
+            realm.add(entities, update: update)
+            
+            try! realm.commitWrite()
+        }
     }
     
     public func delete<T: Entity>(entity: T) {
-        try? realm.write {
-            realm.delete(entity)
+        autoreleasepool {
+            let realm = try! Realm()
+            try! realm.write {
+                realm.delete(entity)
+            }
         }
     }
     
@@ -75,11 +96,22 @@ public class BaseModel {
             return
         }
         
-        realm.beginWrite()
-        
-        realm.delete(entities)
-        
-        try? realm.commitWrite()
+        autoreleasepool {
+            let realm = try! Realm()
+            realm.beginWrite()
+            
+            realm.delete(entities)
+            
+            try! realm.commitWrite()
+
+        }
+    }
+    
+    // MARK: Internal method
+    
+    internal func post(name: String, object: AnyObject) {
+        EventBus.sharedManager
+                .post(name, object: object)
     }
     
 }

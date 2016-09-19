@@ -16,10 +16,8 @@ public class TableViewController: UITableViewController {
     
     var disposeBag = DisposeBag()
     
-    var viewModelDelegate: ViewModelDelegate? {
-        get {
-            return nil
-        }
+    public var viewModelDelegate: ViewModelDelegate? {
+        return nil
     }
     
     // MARK: Lifecycle
@@ -48,6 +46,10 @@ public class TableViewController: UITableViewController {
         if (isBeingDismissed()) {
             destroy()
         }
+    }
+    
+    deinit {
+        print("\(NSStringFromClass(self.dynamicType)) deinit.")
     }
     
     // MARK: Override method

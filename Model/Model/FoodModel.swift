@@ -6,6 +6,8 @@
 //  Copyright © 2016 TVG Soft, Inc. All rights reserved.
 //
 
+import RealmSwift
+
 public class FoodModel: BaseModel {
     
     // MARK: Property
@@ -16,10 +18,16 @@ public class FoodModel: BaseModel {
     
     // MARK: Public method
     
-    public func getFoodOfRestaurant(restaurantId: Int) -> [Food] {
+    public func getFoodOfRestaurant(restaurantId: Int) -> [Food]? {
+        let realm = try! Realm()
+        
         let results = realm.objects(Food.self)
                            .filter("restaurantId = \(restaurantId)")
-                           .sorted("updatedAt")
+                           .sorted("updatedAt", ascending: true)
+        
+        if results.count <= 0 {
+            return nil
+        }
         
         var foods = [Food]()
         
@@ -31,10 +39,16 @@ public class FoodModel: BaseModel {
     }
     
     
-    public func getFoodOfCategory(categoryId: Int) -> [Food] {
+    public func getFoodOfCategory(categoryId: Int) -> [Food]? {
+        let realm = try! Realm()
+        
         let results = realm.objects(Food.self)
                            .filter("categoryId = \(categoryId)")
-                           .sorted("updatedAt")
+                           .sorted("updatedAt", ascending: true)
+        
+        if results.count <= 0 {
+            return nil
+        }
         
         var foods = [Food]()
         

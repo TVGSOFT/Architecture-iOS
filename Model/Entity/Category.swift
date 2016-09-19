@@ -12,6 +12,9 @@ public class Category: Entity {
     
     // MARK: Property
     
+    public static let Replace   = "ReplaceCategory"
+    public static let Update    = "UpdateCategory"
+    
     dynamic var name: String?
     dynamic var image: String?
     

@@ -13,6 +13,9 @@ public class Restaurant: Entity {
     
     // MARK: Property
     
+    public static let Replace   = "ReplaceRestaurant"
+    public static let Update    = "UpdateRestaurant"
+    
     dynamic var name: String?
     dynamic var address: String?
     dynamic var openTime: String?

@@ -47,6 +47,10 @@ public class ViewController: UIViewController {
         }
     }
     
+    deinit {
+        print("\(NSStringFromClass(self.dynamicType)) deinit.")
+    }
+    
     // MARK: Override method
     
     public override func shouldAutorotate() -> Bool {

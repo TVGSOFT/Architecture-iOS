@@ -8,6 +8,7 @@
 
 import Foundation
 import RxSwift
+import Model
 
 public protocol ViewModelDelegate {
     
@@ -51,6 +52,28 @@ public class ViewModel: ViewModelDelegate {
     
     public func destroy() {
         
+    }
+    
+    // MARK: Internal method
+    
+    internal func register(name: String, handler: (AnyObject?) -> Void) {
+        EventBus.sharedManager
+                .register(name, handler: handler)
+    }
+    
+    internal func unregister(name: String) {
+        EventBus.sharedManager
+                .unregister(name)
+    }
+    
+    internal func post(name: String, object: AnyObject) {
+        EventBus.sharedManager
+                .post(name, object: object)
+    }
+    
+    internal func postSticky(name: String, object: AnyObject) {
+        EventBus.sharedManager
+                .postSticky(name, object: object)
     }
     
 }

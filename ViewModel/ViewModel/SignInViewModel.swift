@@ -28,32 +28,29 @@ public class SignInViewModel: ViewModel {
         super.init(navigator: navigator)
     }
     
+    // MARK: Lifecycle
+    
+    public override func didLoad() {
+        super.didLoad()
+        
+    }
+    
+    public override func willAppear() {
+        super.willAppear()
+    }
+    
+    public override func willDisappear() {
+        super.willDisappear()
+    }
+    
+    public override func destroy() {
+        super.destroy()
+    }
+    
     // MARK: Command
     
     public func signInCommand() {
-        service.getRestaurant(
-            0,
-            lastSync: model.lastSyncedAt,
-            offet: 0,
-            limit: 20,
-            successHandler: { [weak self] restaurants in
-            
-                self?.model.add(restaurants, update: true)
-                
-                let tmp = self?.model.getLastest()
-                
-            },
-            failureHandler: { [weak self] error in
-        
-                self?.navigator
-                     .showAlert(
-                        "Error",
-                        message: error.localizedDescription,
-                        negativeTitle: "OK",
-                        negativeHandler: nil
-                )
-                
-            })
+        navigator.goBack()
     }
     
 }

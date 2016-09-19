@@ -14,6 +14,7 @@
 		FB23F4061D772F6300A78AFB /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB23F4001D772F6300A78AFB /* TableViewController.swift */; };
 		FB23F4071D772F6300A78AFB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB23F4011D772F6300A78AFB /* ViewController.swift */; };
 		FB23F40A1D77310300A78AFB /* ViewKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB23F4091D77310300A78AFB /* ViewKey.swift */; };
+		FB38A6FF1D8D548400BACA16 /* RestaurantViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB38A6FE1D8D548400BACA16 /* RestaurantViewModel.swift */; };
 		FB4CC9641D75793B00FA96E0 /* ViewModel.h in Headers */ = {isa = PBXBuildFile; fileRef = FB4CC9631D75793B00FA96E0 /* ViewModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FB4CC96B1D75793B00FA96E0 /* ViewModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB4CC9601D75793B00FA96E0 /* ViewModel.framework */; };
 		FB4CC9701D75793B00FA96E0 /* ViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4CC96F1D75793B00FA96E0 /* ViewModelTests.swift */; };
@@ -65,6 +66,7 @@
 		FB23F4001D772F6300A78AFB /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		FB23F4011D772F6300A78AFB /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FB23F4091D77310300A78AFB /* ViewKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewKey.swift; sourceTree = "<group>"; };
+		FB38A6FE1D8D548400BACA16 /* RestaurantViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantViewModel.swift; sourceTree = "<group>"; };
 		FB4CC9601D75793B00FA96E0 /* ViewModel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ViewModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB4CC9631D75793B00FA96E0 /* ViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewModel.h; path = ViewModel/ViewModel.h; sourceTree = "<group>"; };
 		FB4CC9651D75793B00FA96E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ViewModel/Info.plist; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 			children = (
 				FB23F3FA1D772F3100A78AFB /* ViewModel.swift */,
 				FBE2067C1D8050F100A31748 /* SignInViewModel.swift */,
+				FB38A6FE1D8D548400BACA16 /* RestaurantViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 				FB23F3FB1D772F3100A78AFB /* ViewModel.swift in Sources */,
 				FB23F4031D772F6300A78AFB /* NavigationController.swift in Sources */,
 				FB23F40A1D77310300A78AFB /* ViewKey.swift in Sources */,
+				FB38A6FF1D8D548400BACA16 /* RestaurantViewModel.swift in Sources */,
 				FBE2067D1D8050F100A31748 /* SignInViewModel.swift in Sources */,
 				FB23F4041D772F6300A78AFB /* NavigatorImpl.swift in Sources */,
 				FB23F4061D772F6300A78AFB /* TableViewController.swift in Sources */,
@@ -425,6 +429,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -447,6 +452,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.tvgsoft.ViewModel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};

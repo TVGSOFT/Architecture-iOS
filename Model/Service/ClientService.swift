@@ -8,17 +8,24 @@
 
 public protocol ClientService {
     
-    func getRestaurant(categoryId: Int,
-                       lastSync: NSDate,
-                       offet: Int,
-                       limit: Int,
-                       successHandler: ([Restaurant]) -> Void,
-                       failureHandler: (NSError) -> Void)
+    func getRestaurant(lastSyncedAt: NSDate) -> Response<[Restaurant]>
     
-    func getCategory(lastSync: NSDate,
-                     offet: Int,
-                     limit: Int,
-                     successHandler: ([Category]) -> Void,
-                     failureHandler: (NSError) -> Void)
+    func getRestaurant(offet: Int, limit: Int) -> Response<[Restaurant]>
+    
+    func getRestaurant(categoryId: Int, offet: Int, limit: Int) -> Response<[Restaurant]>
+    
+    func getFavorite(userId: Int) -> Response<[Restaurant]>
+    
+    func getFavorite(userId: Int, lastSyncedAt: NSDate) -> Response<[Restaurant]>
+    
+    func getFavorite(userId: Int, offet: Int, limit: Int) -> Response<[Restaurant]>
+    
+    func addFavorite(favorite: Favorite, completionHandler: (Response<[Restaurant]>) -> Void)
+    
+    func deleteFavorite(favoriteId: Int, completionHandler: (Response<[Bool]>) -> Void)
+    
+    func getCategory() -> Response<[Category]>
+    
+    func getCategory(lastSyncedAt: NSDate) -> Response<[Category]>
     
 }

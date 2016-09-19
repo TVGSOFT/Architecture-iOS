@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB1608581D8F910F001BEFEA /* FetchCategoryJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1608571D8F910F001BEFEA /* FetchCategoryJob.swift */; };
+		FB1820C11D8FF66700E78618 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FBB6A3851D77ED500090B6F5 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FB1820C21D8FF66700E78618 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FBB6A3861D77ED500090B6F5 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FB1820C31D8FF66700E78618 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FBB6A3871D77ED500090B6F5 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FB1820C41D8FF66700E78618 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FBB6A3881D77ED500090B6F5 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FB1DC1891D8B99170076955E /* EventBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1DC1881D8B99170076955E /* EventBus.swift */; };
 		FB23F4111D77331700A78AFB /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB23F40F1D77331700A78AFB /* Configuration.swift */; };
 		FB23F41E1D77492800A78AFB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB23F41D1D77492800A78AFB /* User.swift */; };
 		FB23F4201D77498100A78AFB /* AuthenticateServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB23F41F1D77498100A78AFB /* AuthenticateServiceImpl.swift */; };
@@ -22,10 +28,6 @@
 		FB4CC98F1D75794500FA96E0 /* Model.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB4CC9841D75794500FA96E0 /* Model.framework */; };
 		FB4CC9941D75794500FA96E0 /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4CC9931D75794500FA96E0 /* ModelTests.swift */; };
 		FB5A14811D84091500646261 /* NSDate_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5A14801D84091500646261 /* NSDate_Extension.swift */; };
-		FBB6A38D1D77ED6C0090B6F5 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FBB6A3851D77ED500090B6F5 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FBB6A38E1D77ED6C0090B6F5 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FBB6A3861D77ED500090B6F5 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FBB6A38F1D77ED6C0090B6F5 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FBB6A3871D77ED500090B6F5 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FBB6A3901D77ED6C0090B6F5 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FBB6A3881D77ED500090B6F5 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FBB796601D7C75FC0079C6FF /* JSON_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB7965F1D7C75FC0079C6FF /* JSON_Extension.swift */; };
 		FBB796621D7C762C0079C6FF /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB796611D7C762C0079C6FF /* DateHelper.swift */; };
 		FBC6E3F81D7D024300DD624E /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC6E3F71D7D024300DD624E /* Favorite.swift */; };
@@ -33,6 +35,7 @@
 		FBC6E3FC1D7D03F500DD624E /* SyncHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC6E3FB1D7D03F500DD624E /* SyncHistory.swift */; };
 		FBC6E3FE1D7D059400DD624E /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC6E3FD1D7D059400DD624E /* Response.swift */; };
 		FBCC4F461D77DDDF00E0651E /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCC4F451D77DDDF00E0651E /* Comment.swift */; };
+		FBD633821D8C3C4100296C90 /* Alamofire_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD633811D8C3C4100296C90 /* Alamofire_Extension.swift */; };
 		FBDB3DB41D819C8B0058B36E /* FetchRestaurantJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDB3DB31D819C8B0058B36E /* FetchRestaurantJob.swift */; };
 		FBDB3DB61D819CBD0058B36E /* FetchCommentJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDB3DB51D819CBD0058B36E /* FetchCommentJob.swift */; };
 		FBDB3DB81D819CED0058B36E /* FetchFoodJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDB3DB71D819CED0058B36E /* FetchFoodJob.swift */; };
@@ -43,6 +46,11 @@
 		FBDB3DC31D81A1CF0058B36E /* CommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDB3DC21D81A1CF0058B36E /* CommentModel.swift */; };
 		FBDB3DC51D81A1F60058B36E /* FoodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDB3DC41D81A1F60058B36E /* FoodModel.swift */; };
 		FBDB3DC71D81A20A0058B36E /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDB3DC61D81A20A0058B36E /* CategoryModel.swift */; };
+		FBE1ECE31D8F097800EDBD70 /* EventPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE1ECE21D8F097800EDBD70 /* EventPost.swift */; };
+		FBF916D81D8AF17500F6145B /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FBB6A3851D77ED500090B6F5 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FBF916D91D8AF17500F6145B /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FBB6A3861D77ED500090B6F5 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FBF916DA1D8AF17500F6145B /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FBB6A3871D77ED500090B6F5 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FBF916DB1D8AF17500F6145B /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FBB6A3881D77ED500090B6F5 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,10 +70,24 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				FBB6A38D1D77ED6C0090B6F5 /* Alamofire.framework in Embed Frameworks */,
-				FBB6A38E1D77ED6C0090B6F5 /* Realm.framework in Embed Frameworks */,
-				FBB6A38F1D77ED6C0090B6F5 /* RealmSwift.framework in Embed Frameworks */,
-				FBB6A3901D77ED6C0090B6F5 /* SwiftyJSON.framework in Embed Frameworks */,
+				FB1820C11D8FF66700E78618 /* Alamofire.framework in Embed Frameworks */,
+				FB1820C21D8FF66700E78618 /* Realm.framework in Embed Frameworks */,
+				FB1820C31D8FF66700E78618 /* RealmSwift.framework in Embed Frameworks */,
+				FB1820C41D8FF66700E78618 /* SwiftyJSON.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBF916D71D8AF16B00F6145B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FBF916D81D8AF17500F6145B /* Alamofire.framework in Embed Frameworks */,
+				FBF916D91D8AF17500F6145B /* Realm.framework in Embed Frameworks */,
+				FBF916DA1D8AF17500F6145B /* RealmSwift.framework in Embed Frameworks */,
+				FBF916DB1D8AF17500F6145B /* SwiftyJSON.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -73,6 +95,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FB1608571D8F910F001BEFEA /* FetchCategoryJob.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchCategoryJob.swift; sourceTree = "<group>"; };
+		FB1DC1881D8B99170076955E /* EventBus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventBus.swift; sourceTree = "<group>"; };
 		FB23F40F1D77331700A78AFB /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		FB23F41D1D77492800A78AFB /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FB23F41F1D77498100A78AFB /* AuthenticateServiceImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticateServiceImpl.swift; sourceTree = "<group>"; };
@@ -102,6 +126,7 @@
 		FBC6E3FB1D7D03F500DD624E /* SyncHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncHistory.swift; sourceTree = "<group>"; };
 		FBC6E3FD1D7D059400DD624E /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		FBCC4F451D77DDDF00E0651E /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		FBD633811D8C3C4100296C90 /* Alamofire_Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alamofire_Extension.swift; sourceTree = "<group>"; };
 		FBDB3DB31D819C8B0058B36E /* FetchRestaurantJob.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchRestaurantJob.swift; sourceTree = "<group>"; };
 		FBDB3DB51D819CBD0058B36E /* FetchCommentJob.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchCommentJob.swift; sourceTree = "<group>"; };
 		FBDB3DB71D819CED0058B36E /* FetchFoodJob.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchFoodJob.swift; sourceTree = "<group>"; };
@@ -112,6 +137,7 @@
 		FBDB3DC21D81A1CF0058B36E /* CommentModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentModel.swift; sourceTree = "<group>"; };
 		FBDB3DC41D81A1F60058B36E /* FoodModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodModel.swift; sourceTree = "<group>"; };
 		FBDB3DC61D81A20A0058B36E /* CategoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
+		FBE1ECE21D8F097800EDBD70 /* EventPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventPost.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +159,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FB1DC1871D8B990E0076955E /* EventBus */ = {
+			isa = PBXGroup;
+			children = (
+				FB1DC1881D8B99170076955E /* EventBus.swift */,
+				FBE1ECE21D8F097800EDBD70 /* EventPost.swift */,
+			);
+			path = EventBus;
+			sourceTree = "<group>";
+		};
 		FB23F40B1D77331700A78AFB /* Entity */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +227,7 @@
 		FB4CC97A1D75794500FA96E0 = {
 			isa = PBXGroup;
 			children = (
+				FB1DC1871D8B990E0076955E /* EventBus */,
 				FBB7965E1D7C75E30079C6FF /* Extension */,
 				FBB7965D1D7C5E040079C6FF /* Job */,
 				FB23F4351D774D9C00A78AFB /* Helper */,
@@ -241,6 +277,7 @@
 			children = (
 				FBDB3DBA1D819D690058B36E /* BaseJob.swift */,
 				FBDB3DB31D819C8B0058B36E /* FetchRestaurantJob.swift */,
+				FB1608571D8F910F001BEFEA /* FetchCategoryJob.swift */,
 				FBDB3DB51D819CBD0058B36E /* FetchCommentJob.swift */,
 				FBDB3DB71D819CED0058B36E /* FetchFoodJob.swift */,
 				FBDB3DBC1D819D8D0058B36E /* JobManager.swift */,
@@ -253,6 +290,7 @@
 			children = (
 				FBB7965F1D7C75FC0079C6FF /* JSON_Extension.swift */,
 				FB5A14801D84091500646261 /* NSDate_Extension.swift */,
+				FBD633811D8C3C4100296C90 /* Alamofire_Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -306,6 +344,7 @@
 				FB4CC98A1D75794500FA96E0 /* Sources */,
 				FB4CC98B1D75794500FA96E0 /* Frameworks */,
 				FB4CC98C1D75794500FA96E0 /* Resources */,
+				FBF916D71D8AF16B00F6145B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -329,9 +368,11 @@
 				TargetAttributes = {
 					FB4CC9831D75794500FA96E0 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 					};
 					FB4CC98D1D75794500FA96E0 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -375,7 +416,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBD633821D8C3C4100296C90 /* Alamofire_Extension.swift in Sources */,
 				FBC6E3F81D7D024300DD624E /* Favorite.swift in Sources */,
+				FBE1ECE31D8F097800EDBD70 /* EventPost.swift in Sources */,
+				FB1DC1891D8B99170076955E /* EventBus.swift in Sources */,
+				FB1608581D8F910F001BEFEA /* FetchCategoryJob.swift in Sources */,
 				FB23F4221D7749EC00A78AFB /* AuthenticateService.swift in Sources */,
 				FB23F41E1D77492800A78AFB /* User.swift in Sources */,
 				FBC6E3FE1D7D059400DD624E /* Response.swift in Sources */,
@@ -535,6 +580,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.tvgsoft.Model;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -556,26 +602,37 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.tvgsoft.Model;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
 		FB4CC99C1D75794500FA96E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = ModelTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tvgsoft.ModelTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
 		FB4CC99D1D75794500FA96E0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = ModelTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tvgsoft.ModelTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};

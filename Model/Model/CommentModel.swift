@@ -6,6 +6,8 @@
 //  Copyright © 2016 TVG Soft, Inc. All rights reserved.
 //
 
+import RealmSwift
+
 public class CommentModel: BaseModel {
     
     // MARK: Property
@@ -16,10 +18,16 @@ public class CommentModel: BaseModel {
     
     // MARK: Public method
     
-    public func getComment(restaurantId: Int) -> [Comment] {
+    public func getComment(restaurantId: Int) -> [Comment]? {
+        let realm = try! Realm()
+        
         let results = realm.objects(Comment.self)
                            .filter("restaurantId = \(restaurantId)")
-                           .sorted("updatedAt")
+                           .sorted("updatedAt", ascending: true)
+        
+        if results.count <= 0 {
+            return nil
+        }
         
         var comments = [Comment]()
         

@@ -22,8 +22,6 @@ public class NavigatorImpl: Navigator {
     
     public func configure(key: ViewKey, view: String) {
         pages[key] = view
-        
-        print(view)
     }
     
     // MARK: INavigator implement
@@ -103,7 +101,7 @@ extension UIApplication {
         }
         
         if let nagvigationController = parentViewController as? UINavigationController {
-            return nagvigationController.topViewController;
+            return nagvigationController.topViewController
         }
         
         return parentViewController

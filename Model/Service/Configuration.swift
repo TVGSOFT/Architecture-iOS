@@ -17,9 +17,27 @@ public enum Function: String {
     case GetRestaurant = "/api/v1/restaurants"
     
     case GetCategory = "/api/v1/categories"
+    
+    case GetFavorite = "/api/v1/favoriteRestaurants"
 
     case SignIn = "/api/v1/authenticate/sign-in"
 
     case SignUp = "/api/v1/authenticate/sign-up"
 
+}
+
+public class Constant {
+    
+    // MARK: Property
+    
+    public static let RecordPerPage = 20
+    
+    public static let RecordCacheLimited = 20
+    
+    // MARK: Constructor
+    
+    private init() {
+        
+    }
+    
 }
