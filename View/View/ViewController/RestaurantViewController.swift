@@ -26,7 +26,7 @@ class RestaurantViewController: TableViewController {
         
         refreshControl = UIRefreshControl()
         
-        tableView.contentInset = UIEdgeInsets(top: 5, left: 0, bottom: 5, right: 0)
+        tableView.contentInset = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0)
         tableView.allowsSelection = false
         tableView.estimatedRowHeight = 373
         tableView.rowHeight = UITableViewAutomaticDimension
@@ -51,7 +51,7 @@ class RestaurantViewController: TableViewController {
     }
 
     @IBAction func refresh(sender: AnyObject) {
-        viewModel?.showSignInCommand()
+//        viewModel?.showSignInCommand()
     }
     
     /*

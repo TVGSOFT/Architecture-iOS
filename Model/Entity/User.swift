@@ -18,8 +18,8 @@ public class User: Entity {
     
     // MARK: Override method
     
-    public override class func from<T: User>(json: JSON, inout output: T?) {
-        super.from(json, output: &output)
+    public override class func fromJson<T: User>(json: JSON, inout output: T?) {
+        super.fromJson(json, output: &output)
         
         output!.name = json["name"].string
         output!.email = json["email"].string

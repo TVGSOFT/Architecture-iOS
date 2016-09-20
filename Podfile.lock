@@ -1,0 +1,54 @@
+PODS:
+  - Alamofire (3.4.1)
+  - AlamofireImage (2.4.1):
+    - Alamofire (~> 3.3)
+  - DGElasticPullToRefresh (1.0.3)
+  - IQKeyboardManagerSwift (4.0.4)
+  - Material (1.42.7)
+  - Realm (1.0.2):
+    - Realm/Headers (= 1.0.2)
+  - Realm/Headers (1.0.2)
+  - RealmSwift (1.0.2):
+    - Realm (= 1.0.2)
+  - RxBlocking (2.6.0):
+    - RxSwift (~> 2.5)
+  - RxCocoa (2.6.0):
+    - RxSwift (~> 2.5)
+  - RxSwift (2.6.0)
+  - RxTests (2.6.0):
+    - RxSwift (~> 2.5)
+  - SwiftyJSON (2.3.2)
+  - Swinject (1.1.2)
+
+DEPENDENCIES:
+  - Alamofire (~> 3.0)
+  - AlamofireImage (~> 2.0)
+  - DGElasticPullToRefresh
+  - IQKeyboardManagerSwift
+  - Material (~> 1.0)
+  - RealmSwift
+  - RxBlocking
+  - RxCocoa
+  - RxSwift
+  - RxTests
+  - SwiftyJSON
+  - Swinject
+
+SPEC CHECKSUMS:
+  Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
+  AlamofireImage: 3ccf3347d9ea24580dc11fb892770a0be6a29826
+  DGElasticPullToRefresh: 040f39ae69840b3261d163fe6735c5901bf851e9
+  IQKeyboardManagerSwift: e0964d04d6a29b71016fd346dca13ecb80a2823a
+  Material: 2d46a44719b1f19e52956518af8aea54ac714963
+  Realm: 9d5c46a4d7d27958530a8dfc58f63a99e5c2cba3
+  RealmSwift: 82f3ac5e24530143dddfde2033acc0d308f27d96
+  RxBlocking: f2e0a7e74d5e9d3029d2b1118e2af01f583fbdd8
+  RxCocoa: 89ab00d5753502520227940e3a0e0a0413683c6b
+  RxSwift: 77f3a0b15324baa7a1c9bfa9f199648a82424e26
+  RxTests: cdcc379c70e80089a8bc2c99515223339d1c3b81
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+  Swinject: 3debc5ac926dcd1be00947265a9db7a5f31b272a
+
+PODFILE CHECKSUM: d4ca77ebb62f2315a9e09e21d67699c4f1c2615f
+
+COCOAPODS: 1.0.1

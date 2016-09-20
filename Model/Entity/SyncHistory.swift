@@ -17,8 +17,8 @@ public class SyncHistory: Entity {
     
     // MARK: Override method
     
-    public override class func from<T: SyncHistory>(json: JSON, inout output: T?) {
-        super.from(json, output: &output)
+    public override class func fromJson<T: SyncHistory>(json: JSON, inout output: T?) {
+        super.fromJson(json, output: &output)
         
         output!.tableName = json["name_table"].string
         output!.lastSyncedAt = json["last_sync_timestamp"].date

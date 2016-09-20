@@ -35,8 +35,8 @@ public class Restaurant: Entity {
     
     // MARK: Override method
     
-    public override class func from<T: Restaurant>(json: JSON, inout output: T?) {
-        super.from(json, output: &output)
+    public override class func fromJson<T: Restaurant>(json: JSON, inout output: T?) {
+        super.fromJson(json, output: &output)
         
         output!.name = json["name"].string
         output!.address = json["address"].string
@@ -52,7 +52,7 @@ public class Restaurant: Entity {
             
             for commentJson in commentsJson {
                 var comment: Comment?
-                Comment.from(commentJson, output: &comment)
+                Comment.fromJson(commentJson, output: &comment)
                 
                 output!.comments!.append(comment!)
             }

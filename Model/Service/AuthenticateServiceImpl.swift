@@ -47,10 +47,10 @@ public class AuthenticateServiceImpl: Service, AuthenticateService {
         let response = Response<User>()
         
         if let hasJon = json {
-            response.from(hasJon)
+            response.fromJson(hasJon)
             
             if response.isSuccess {
-                User.from(hasJon["data"], output: &response.data)
+                User.fromJson(hasJon["data"], output: &response.data)
             } else {
                 response.error = NSError(domain: response.message!, code: 0, userInfo: nil)
             }

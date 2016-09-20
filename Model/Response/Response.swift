@@ -21,7 +21,7 @@ public class Response<T> {
     
     // Public method
     
-    public func from(json: JSON) {
+    public func fromJson(json: JSON) {
         isSuccess = json["success"].boolValue
         message = json["message"].string
         lastSyncedAt = json["last_sync_timestamp"].date

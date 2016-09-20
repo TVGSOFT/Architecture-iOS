@@ -10,12 +10,21 @@ import ViewModel
 import RxSwift
 import RxCocoa
 import Model
+import Material
 
 class SignInViewController: ViewController {
 
     // MARK: Property
     
     @IBOutlet weak var cancelButton: UIButton!
+    
+    @IBOutlet weak var emailTextField: TextField!
+    
+    @IBOutlet weak var passwordTextField: TextField!
+    
+    @IBOutlet weak var signInButton: RaisedButton!
+    
+    @IBOutlet weak var signUpButton: RaisedButton!
     
     override var viewModelDelegate: ViewModelDelegate? {
         return viewModel

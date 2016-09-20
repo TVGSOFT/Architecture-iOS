@@ -17,8 +17,8 @@ public class Favorite: Entity {
     
     // MARK: Override method
     
-    public override class func from<T: Favorite>(json: JSON, inout output: T?) {
-        super.from(json, output: &output)
+    public override class func fromJson<T: Favorite>(json: JSON, inout output: T?) {
+        super.fromJson(json, output: &output)
         
         output!.restaurantId = json["restaurant_id"].intValue
         output!.userId = json["user_id"].intValue

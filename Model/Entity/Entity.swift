@@ -26,7 +26,7 @@ public class Entity: Object {
     
     // MARK: Public method
     
-    public class func from<T: Entity>(json: JSON, inout output: T?) {
+    public class func fromJson<T: Entity>(json: JSON, inout output: T?) {
         output = T()
         output!.id = json["id"].intValue
         output!.createdAt = json["created_at"].date

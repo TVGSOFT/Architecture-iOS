@@ -20,8 +20,8 @@ public class Food: Entity {
     
     // MARK: Override method
     
-    public override class func from<T: Food>(json: JSON, inout output: T?) {
-        super.from(json, output: &output)
+    public override class func fromJson<T: Food>(json: JSON, inout output: T?) {
+        super.fromJson(json, output: &output)
         
         output!.name = json["name"].string
         output!.image = json["image"].string

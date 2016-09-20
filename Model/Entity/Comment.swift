@@ -20,13 +20,13 @@ public class Comment: Entity {
     
     // MARK: Override method
     
-    public override class func from<T: Comment>(json: JSON, inout output: T?) {
-        super.from(json, output: &output)
+    public override class func fromJson<T: Comment>(json: JSON, inout output: T?) {
+        super.fromJson(json, output: &output)
         
         output!.title = json["title"].string
         output!.content = json["content"].string
         
-        User.from(json["commenter"], output: &output!.commenter)
+        User.fromJson(json["commenter"], output: &output!.commenter)
     }
     
 }

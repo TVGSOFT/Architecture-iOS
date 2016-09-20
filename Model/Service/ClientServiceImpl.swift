@@ -96,14 +96,14 @@ public class ClientServiceImpl: Service, ClientService {
         
         if let hasJson = json {
            
-            response.from(hasJson)
+            response.fromJson(hasJson)
             
             if response.isSuccess {
                 response.data = [T]()
                 
                 for dataJson in hasJson["data"].arrayValue {
                     var data: T?
-                    T.from(dataJson, output: &data)
+                    T.fromJson(dataJson, output: &data)
                     
                     response.data!.append(data!)
                 }
@@ -124,10 +124,10 @@ public class ClientServiceImpl: Service, ClientService {
         
         if let hasJson = json {
             
-            response.from(hasJson)
+            response.fromJson(hasJson)
             
             if response.isSuccess {
-                T.from(hasJson["data"], output: &response.data)
+                T.fromJson(hasJson["data"], output: &response.data)
             } else {
                 response.error = NSError(domain: response.message!, code: 0, userInfo: nil)
             }
@@ -145,14 +145,14 @@ public class ClientServiceImpl: Service, ClientService {
         
         if let hasJson = json {
             let response = Response<[T]>()
-            response.from(hasJson)
+            response.fromJson(hasJson)
             
             if response.isSuccess {
                 response.data = [T]()
                 
                 for dataJson in hasJson["data"].arrayValue {
                     var data: T?
-                    T.from(dataJson, output: &data)
+                    T.fromJson(dataJson, output: &data)
                     
                     response.data!.append(data!)
                 }
@@ -178,10 +178,10 @@ public class ClientServiceImpl: Service, ClientService {
         
         if let hasJson = json {
             let response = Response<T>()
-            response.from(hasJson)
+            response.fromJson(hasJson)
             
             if response.isSuccess {
-                T.from(hasJson["data"], output: &response.data)
+                T.fromJson(hasJson["data"], output: &response.data)
                 
                 completionHandler(response.data!, nil)
             } else {
