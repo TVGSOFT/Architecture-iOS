@@ -8,14 +8,14 @@ target 'View' do
     project 'View/View.xcodeproj'
 
     #CocoaPod
-    pod 'Alamofire', '~> 3.0'
+    pod 'Alamofire', '~> 3.5'
     pod 'AlamofireImage', '~> 2.0'
-    pod 'SwiftyJSON'
+    pod 'SwiftyJSON', '~> 2.3.2'
     
-    pod 'DGElasticPullToRefresh'
-    pod 'Material', '~> 1.0'
-	pod 'IQKeyboardManagerSwift'
-
+    pod 'DGElasticPullToRefresh', '~> 1.0.3'
+    pod 'Material', :git => 'https://github.com/CosmicMind/Material.git', :branch => 'swift-2.3'
+    pod 'IQKeyboardManagerSwift', '4.0.5'
+    
     pod 'RxSwift'
     pod 'RxCocoa'
     pod 'Swinject'
@@ -42,7 +42,7 @@ target 'ViewModel' do
     pod 'Swinject'
     
     pod 'RealmSwift'
-        
+
     target 'ViewModelTests' do    
         #CocoaPod
         pod 'RxBlocking'
@@ -54,8 +54,8 @@ target 'Model' do
     project 'Model/Model.xcodeproj'
     
     #CocoaPod
-    pod 'Alamofire', '~> 3.0'
-    pod 'SwiftyJSON'
+    pod 'Alamofire', '~> 3.5'
+    pod 'SwiftyJSON', '~> 2.3.2'
 
 	pod 'RealmSwift'
 
@@ -67,7 +67,7 @@ end
 post_install do |installer|
   installer.pods_project.targets.each do |target|
     target.build_configurations.each do |config|
-        config.build_settings['SWIFT_VERSION'] = '2.2'
+        config.build_settings['SWIFT_VERSION'] = '2.3'
     end
   end
 end

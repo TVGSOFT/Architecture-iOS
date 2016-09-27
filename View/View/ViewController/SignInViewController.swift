@@ -16,8 +16,6 @@ class SignInViewController: ViewController {
 
     // MARK: Property
     
-    @IBOutlet weak var cancelButton: UIButton!
-    
     @IBOutlet weak var emailTextField: TextField!
     
     @IBOutlet weak var passwordTextField: TextField!
@@ -25,6 +23,8 @@ class SignInViewController: ViewController {
     @IBOutlet weak var signInButton: RaisedButton!
     
     @IBOutlet weak var signUpButton: RaisedButton!
+    
+    @IBOutlet weak var loadingIndicatorView: UIActivityIndicatorView!
     
     override var viewModelDelegate: ViewModelDelegate? {
         return viewModel
@@ -36,15 +36,13 @@ class SignInViewController: ViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        cancelButton.rx_tap
-              .subscribe(onNext: { [weak self] in
-                
-                self?.viewModel?.signInCommand()
-              
-              })
-              .addDisposableTo(self.disposeBag)
+       
     }
     
+    // MARK: Override method
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .Default
+    }
     
 }

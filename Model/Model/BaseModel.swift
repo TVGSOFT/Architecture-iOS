@@ -109,7 +109,7 @@ public class BaseModel {
     
     // MARK: Internal method
     
-    internal func post(name: String, object: AnyObject) {
+    internal func post(name: String, object: AnyObject?) {
         EventBus.sharedManager
                 .post(name, object: object)
     }

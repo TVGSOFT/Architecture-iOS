@@ -66,12 +66,12 @@ public class ViewModel: ViewModelDelegate {
                 .unregister(name)
     }
     
-    internal func post(name: String, object: AnyObject) {
+    internal func post(name: String, object: AnyObject?) {
         EventBus.sharedManager
                 .post(name, object: object)
     }
     
-    internal func postSticky(name: String, object: AnyObject) {
+    internal func postSticky(name: String, object: AnyObject?) {
         EventBus.sharedManager
                 .postSticky(name, object: object)
     }

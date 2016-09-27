@@ -2,7 +2,7 @@
 //  ViewModel.h
 //  ViewModel
 //
-//  Created by Giáp Trần on 8/30/16.
+//  Created by Giáp Trần on 9/27/16.
 //  Copyright © 2016 TVG Soft, Inc. All rights reserved.
 //
 

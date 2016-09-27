@@ -12,11 +12,13 @@ import IQKeyboardManagerSwift
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    // MARK: Property
+    
     var window: UIWindow?
 
+    // MARK: UIApplicationDelegate implement
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        
         IQKeyboardManager.sharedManager().enable = true
         
         return true

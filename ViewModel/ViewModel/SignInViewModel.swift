@@ -50,7 +50,11 @@ public class SignInViewModel: ViewModel {
     // MARK: Command
     
     public func signInCommand() {
-        navigator.goBack()
+        post(ViewKey.SignIn.rawValue, object: nil)
+    }
+    
+    public func signUpCommand() {
+        
     }
     
 }

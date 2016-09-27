@@ -17,6 +17,8 @@ public class RestaurantViewModel: ViewModel {
     private let model: RestaurantModel
     private let jobManager: JobManager
     
+    private var restaurants: Variable<[Restaurant]>?
+    
     // MARK: Constructor
     
     public init(navigator: Navigator, service: ClientService, model: RestaurantModel, jobManager: JobManager) {
@@ -32,11 +34,28 @@ public class RestaurantViewModel: ViewModel {
     public override func didLoad() {
         super.didLoad()
         
+        self.restaurants = Variable<[Restaurant]>([Restaurant]())
+        
+        let job = FetchRestaurantJob(service: service, model: model, priority: .Normal)
+        jobManager.addOperation(job)
+        
         register(Restaurant.Replace) { [unowned self] (object) in
-            
+            if let data = object as? [Restaurant] {
+                self.restaurants?.value.removeAll()
+                
+                for item in data {
+                    self.restaurants?.value.append(item)
+                }
+            }
         }
         register(Restaurant.Update) { [unowned self] (object) in
-            
+            if let data = object as? [Restaurant] {
+                self.restaurants?.value.removeAll()
+                
+                for item in data {
+                    self.restaurants?.value.append(item)
+                }
+            }
         }
     }
     
@@ -53,6 +72,8 @@ public class RestaurantViewModel: ViewModel {
         
         unregister(Restaurant.Replace)
         unregister(Restaurant.Update)
+        
+        restaurants = nil
     }
     
     // MARK: Command

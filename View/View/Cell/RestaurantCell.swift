@@ -17,12 +17,6 @@ class RestaurantCell: BaseTableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
 
-        containerView.layer.masksToBounds = false
-        containerView.layer.shadowColor = UIColor.blackColor().CGColor
-        containerView.layer.shadowRadius = 5
-        containerView.layer.shadowOffset = CGSize(width: 5, height: 5)
-        containerView.layer.shadowOpacity = 0.6
-        containerView.layer.shadowPath = UIBezierPath(rect: containerView.frame).CGPath
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

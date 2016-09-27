@@ -2,7 +2,7 @@
 //  ViewModelTests.swift
 //  ViewModelTests
 //
-//  Created by Giáp Trần on 8/30/16.
+//  Created by Giáp Trần on 9/27/16.
 //  Copyright © 2016 TVG Soft, Inc. All rights reserved.
 //
 
@@ -28,7 +28,7 @@ class ViewModelTests: XCTestCase {
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
-        self.measureBlock {
+        self.measure {
             // Put the code you want to measure the time of here.
         }
     }

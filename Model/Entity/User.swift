@@ -16,6 +16,8 @@ public class User: Entity {
     dynamic var email: String?
     dynamic var password: String?
     
+    public var isActived: Bool = false
+    
     // MARK: Override method
     
     public override class func fromJson<T: User>(json: JSON, inout output: T?) {

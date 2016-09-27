@@ -8,6 +8,8 @@
 
 import UIKit
 import ViewModel
+import DGElasticPullToRefresh
+import Material
 
 class RestaurantViewController: TableViewController {
     
@@ -24,14 +26,17 @@ class RestaurantViewController: TableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        refreshControl = UIRefreshControl()
+        setupRefreshLoading()
         
-        tableView.contentInset = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0)
         tableView.allowsSelection = false
         tableView.estimatedRowHeight = 373
         tableView.rowHeight = UITableViewAutomaticDimension
     }
 
+    deinit {
+        tableView.dg_removePullToRefresh()
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -53,6 +58,23 @@ class RestaurantViewController: TableViewController {
     @IBAction func refresh(sender: AnyObject) {
 //        viewModel?.showSignInCommand()
     }
+    
+    // MARK: Private method
+    
+    private func setupRefreshLoading() {
+        let loadingView = DGElasticPullToRefreshLoadingViewCircle()
+        loadingView.tintColor = UIColor.whiteColor()
+        tableView.dg_addPullToRefreshWithActionHandler({ [weak self] _ in
+           
+            self?.tableView.dg_stopLoading()
+            
+        
+        }, loadingView: loadingView)
+        
+        tableView.dg_setPullToRefreshFillColor(UIColor.appTintColor)
+        tableView.dg_setPullToRefreshBackgroundColor(tableView.backgroundColor!)
+    }
+
     
     /*
     // Override to support conditional editing of the table view.

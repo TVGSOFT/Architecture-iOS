@@ -33,12 +33,12 @@ public class EventBus {
     
     // MARK: Public method
     
-    public func post(name: String, object: AnyObject) {
+    public func post(name: String, object: AnyObject?) {
         NSNotificationCenter.defaultCenter()
                             .postNotificationName(name, object: object)
     }
     
-    public func postSticky(name: String, object: AnyObject) {
+    public func postSticky(name: String, object: AnyObject?) {
         if let eventPost = subscribers[name] {
             eventPost.object = object
             eventPost.isActive = true
